@@ -2,6 +2,7 @@ import {
   Component,
   Input,
   OnChanges,
+  OnDestroy,
   OnInit,
   SimpleChanges,
 } from '@angular/core';
@@ -11,7 +12,7 @@ import {
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss'],
 })
-export class TitleComponent implements OnInit, OnChanges {
+export class TitleComponent implements OnInit, OnChanges, OnDestroy {
   @Input() public title: string = 'Bem-vindo!';
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -19,4 +20,8 @@ export class TitleComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {}
+
+  ngOnDestroy(): void {
+    console.log('Componente destruído');
+  }
 }
