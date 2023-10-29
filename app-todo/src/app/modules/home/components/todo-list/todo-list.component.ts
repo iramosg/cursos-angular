@@ -8,8 +8,8 @@ import { TaskList } from '../../model/task-list';
 })
 export class TodoListComponent {
   public taskList: Array<TaskList> = [
-    { task: 'Minha nova task', checked: true },
-    { task: 'Minha nova task 2', checked: false },
+    // { task: 'Minha nova task', checked: true },
+    // { task: 'Minha nova task 2', checked: false },
   ];
 
   public deleteItemTaskList(event: number) {
@@ -19,5 +19,10 @@ export class TodoListComponent {
   public deleteAllTaskList() {
     const confirm = window.confirm('Você deseja realmente deletar tudo?');
     if (confirm) this.taskList = [];
+  }
+
+  public setEmitTaskList(event: string) {
+    console.log(event);
+    this.taskList.push({ task: event, checked: false });
   }
 }
