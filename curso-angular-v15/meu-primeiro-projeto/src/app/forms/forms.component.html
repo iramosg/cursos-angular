@@ -1,7 +1,20 @@
 <form #form="ngForm">
+  <!-- {{ form.valid }} -->
+
   <label for="nome"
     >Nome:
-    <input type="text" name="nome" ngModel />
+    <input
+      type="text"
+      name="nome"
+      #nome="ngModel"
+      [ngModel]="nome.value"
+      required
+    />
+    <span *ngIf="nome.invalid && nome.dirty && nome.touched">Inválido</span>
+    {{ nome.invalid }}
+    {{ nome.valid }}
+    {{ nome.dirty }}
+    {{ nome.touched }}
   </label>
   <br />
   <br />
