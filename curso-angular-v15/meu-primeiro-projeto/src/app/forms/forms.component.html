@@ -47,6 +47,13 @@
   </label>
   <br />
   <br />
+
+  <select name="comidas" ngModel>
+    <option value="">Selecione um alimento</option>
+    <option [value]="item.comida" *ngFor="let item of list">
+      {{ item.comida }}
+    </option>
+  </select>
 </form>
 
 {{ form.value | json }}
