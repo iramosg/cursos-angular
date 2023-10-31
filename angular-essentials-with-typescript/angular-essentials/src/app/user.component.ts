@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   `,
 })
 export class UserComponent {
-  name = 'Igor';
+  @Input() name: any;
 
   onUserInput(event: any) {
     this.name = event.target.value;
