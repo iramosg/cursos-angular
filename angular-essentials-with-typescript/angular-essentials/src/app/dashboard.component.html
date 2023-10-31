@@ -1,0 +1,8 @@
+<!-- <p>{{ loadState }}</p> -->
+<div>
+  <p [textContent]="loadState"></p>
+  <input type="text" [(ngModel)]="loadState" />
+</div>
+<div>
+  <button (click)="onSwitchState()">Switch State</button>
+</div>
