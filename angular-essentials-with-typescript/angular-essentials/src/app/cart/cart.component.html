@@ -1,2 +1,13 @@
 <input type="text" [(ngModel)]="newItem" />
-<button (click)="onAddItem()">Add Item</button>
+<button
+  (click)="onAddItem()"
+  class="btn btn-primary"
+  [ngClass]="{ 'btn-primary': newItem !== '', 'btn-secondary': newItem == '' }"
+>
+  Add Item
+</button>
+<hr />
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of items">{{ item }}</li>
+</ul>
