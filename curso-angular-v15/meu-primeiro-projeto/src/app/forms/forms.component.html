@@ -67,6 +67,9 @@
       {{ item.comida }}
     </option>
   </select>
+  <br />
+  <br />
+  <button [disabled]="form.invalid">Enviar</button>
 </form>
 
 {{ form.value | json }}
