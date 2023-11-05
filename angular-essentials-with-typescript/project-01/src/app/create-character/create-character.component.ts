@@ -11,4 +11,8 @@ export class CreateCharacterComponent {
     { display: 'Light', value: 'light' },
     { display: 'Dark', value: 'dark' },
   ];
+
+  onSubmit(submittedForm: any) {
+    console.log(submittedForm);
+  }
 }
