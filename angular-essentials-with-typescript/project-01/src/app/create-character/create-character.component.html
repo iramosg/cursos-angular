@@ -5,12 +5,8 @@
   </div>
   <div class="form-group">
     <label for="side">Choose Side</label>
-    <select name="side" id="side" class="form-select">
-      <option
-        *ngFor="let option of availableSides"
-        [value]="option.value"
-        ngModel
-      >
+    <select name="side" id="side" class="form-select" ngModel>
+      <option *ngFor="let option of availableSides" [value]="option.value">
         {{ option.display }}
       </option>
     </select>
