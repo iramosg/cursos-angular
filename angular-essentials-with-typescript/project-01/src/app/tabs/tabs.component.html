@@ -1,35 +1,26 @@
 <div>
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a
-        class="nav-link"
-        [ngClass]="{ active: chosenList === 'all' }"
-        (click)="onChoose('all')"
-        style="cursor: pointer"
+      <a routerLink="/characters/all" class="nav-link" routerLinkActive="active"
         >All</a
       >
     </li>
     <li class="nav-item">
       <a
+        routerLink="/characters/light"
         class="nav-link"
-        [ngClass]="{ active: chosenList === 'light' }"
-        (click)="onChoose('light')"
-        style="cursor: pointer"
+        routerLinkActive="active"
         >Light</a
       >
     </li>
     <li class="nav-item">
       <a
+        routerLink="/characters/dark"
         class="nav-link"
-        [ngClass]="{ active: chosenList === 'dark' }"
-        (click)="onChoose('dark')"
-        style="cursor: pointer"
+        routerLinkActive="active"
         >Dark</a
       >
     </li>
   </ul>
-  <app-list
-    [characters]="getCharacters()"
-
-  ></app-list>
+  <router-outlet></router-outlet>
 </div>
