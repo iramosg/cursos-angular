@@ -1,1 +1,9 @@
-<p>item works!</p>
+<a href="#" class="list-group-item list-group-item-action" aria-current="true">
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{ character.name }}</h5>
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="onAssign('light')">Light</button>
+    <button class="btn btn-danger" (click)="onAssign('dark')">Dark</button>
+  </div>
+</a>
