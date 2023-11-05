@@ -7,9 +7,10 @@ import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 import { StarWarsService } from './star-wars.service';
 import { LogService } from './log.service';
+import { CreateCharacterComponent } from './create-character/create-character.component';
 
 @NgModule({
-  declarations: [AppComponent, TabsComponent, ListComponent, ItemComponent],
+  declarations: [AppComponent, TabsComponent, ListComponent, ItemComponent, CreateCharacterComponent],
   imports: [BrowserModule],
   providers: [StarWarsService, LogService],
   bootstrap: [AppComponent],
