@@ -8,6 +8,7 @@
       class="form-control"
       ngModel
       required
+      [ngModel]="defaultName"
       #nameCtrl="ngModel"
     />
     <span class="form-text" *ngIf="nameCtrl.invalid && nameCtrl.touched"

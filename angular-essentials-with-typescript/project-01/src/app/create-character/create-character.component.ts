@@ -12,8 +12,9 @@ export class CreateCharacterComponent {
     { display: 'Light', value: 'light' },
     { display: 'Dark', value: 'dark' },
   ];
-
   swService: StarWarsService;
+  defaultName = 'Obi-Wan';
+
   constructor(swService: StarWarsService) {
     this.swService = swService;
   }
