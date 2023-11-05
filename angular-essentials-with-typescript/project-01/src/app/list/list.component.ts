@@ -7,9 +7,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ListComponent {
   @Input() characters: any;
-  @Output() sideAssigned = new EventEmitter<{ name: string; side: string }>();
+  // @Output() sideAssigned = new EventEmitter<{ name: string; side: string }>();
 
-  onSideAssigned(charInfo: any) {
-    this.sideAssigned.emit(charInfo);
-  }
+  // onSideAssigned(charInfo: any) {
+  //   this.sideAssigned.emit(charInfo);
+  // }
 }
