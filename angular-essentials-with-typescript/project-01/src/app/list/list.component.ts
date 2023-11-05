@@ -11,6 +11,7 @@ export class ListComponent implements OnInit {
   characters: any = [];
   activateRoute: ActivatedRoute;
   swService: StarWarsService;
+  loadedSide = 'all';
   // @Output() sideAssigned = new EventEmitter<{ name: string; side: string }>();
 
   // onSideAssigned(charInfo: any) {
@@ -24,6 +25,11 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.activateRoute.params.subscribe((params: any) => {
       this.characters = this.swService.getCharacters(params.side);
+      this.loadedSide = params.side;
+    });
+
+    this.swService.charactersChanged.subscribe(() => {
+      this.characters = this.swService.getCharacters(this.loadedSide);
     });
   }
 }
