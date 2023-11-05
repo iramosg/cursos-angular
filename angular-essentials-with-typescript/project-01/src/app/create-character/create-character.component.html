@@ -1,7 +1,14 @@
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
   <div class="form-group">
     <label for="name">Character Name</label>
-    <input type="text" id="name" name="name" class="form-control" ngModel />
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="form-control"
+      ngModel
+      required
+    />
   </div>
   <div class="form-group">
     <label for="side">Choose Side</label>
