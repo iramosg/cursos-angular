@@ -5,11 +5,11 @@
   </div>
   <div class="form-group">
     <label for="side">Choose Side</label>
-    <select name="side" id="side">
+    <select name="side" id="side" class="form-select">
       <option *ngFor="let option of availableSides" [value]="option.value">
         {{ option.display }}
       </option>
     </select>
   </div>
-  <button class="btn btn-primary" type="submit">Add</button>
+  <button class="btn btn-primary mt-2" type="submit">Add</button>
 </form>
