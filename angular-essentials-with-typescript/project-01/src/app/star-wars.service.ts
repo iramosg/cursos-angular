@@ -19,7 +19,11 @@ export class StarWarsService {
     this.http = http;
   }
 
-  fetchCharacters() {}
+  fetchCharacters() {
+    this.http.get('https://swapi.dev/api/people').subscribe((response: any) => {
+      console.log(response);
+    });
+  }
 
   getCharacters(chosenList: any) {
     if (chosenList === 'all') {
