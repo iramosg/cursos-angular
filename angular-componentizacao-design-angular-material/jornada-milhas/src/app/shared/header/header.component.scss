@@ -1,11 +1,22 @@
-.example-spacer {
-  flex: 1 1 auto;
-}
+.app-header {
+  .mat-toolbar {
+    background-color: black;
+    color: white;
+    padding: 0 256px;
+    img {
+      max-width: 161px;
+    }
+  }
 
-.mat-toolbar {
-  background-color: black;
-  color: white;
-  img {
-    max-width: 161px;
+  button {
+    margin: 0 16px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-mdc-outlined-button:not(:disabled) {
+    border-color: white;
   }
 }
