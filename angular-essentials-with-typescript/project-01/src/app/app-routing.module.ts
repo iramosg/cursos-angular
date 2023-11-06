@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsComponent } from './tabs/tabs.component';
 import { ListComponent } from './list/list.component';
-import { CreateCharacterComponent } from './create-character/create-character.component';
 
+// const createCharacterModule = ;
 const routes: Routes = [
   {
     path: 'characters',
@@ -13,7 +13,13 @@ const routes: Routes = [
       { path: ':side', component: ListComponent },
     ],
   },
-  { path: 'new-character', component: CreateCharacterComponent },
+  {
+    path: 'new-character',
+    loadChildren: () =>
+      import('./create-character/create-character.module').then(
+        (module) => module.CreateCharacterModule
+      ),
+  },
   { path: '**', redirectTo: '/' }, // Sempre tem que ser a última linha
 ];
 
