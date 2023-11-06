@@ -26,7 +26,6 @@ export class ListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.swService.fetchCharacters();
     this.activateRoute.params.subscribe((params: any) => {
       this.characters = this.swService.getCharacters(params.side);
       this.loadedSide = params.side;
