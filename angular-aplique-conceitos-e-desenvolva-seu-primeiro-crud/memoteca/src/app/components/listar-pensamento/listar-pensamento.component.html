@@ -6,10 +6,8 @@
     </button>
   </header>
   <div class="mural">
-    <div>
-      <app-pensamento
-        *ngFor="let pensamento of listaPensamentos"
-      ></app-pensamento>
+    <div *ngFor="let pensamento of listaPensamentos">
+      <app-pensamento [pensamento]="pensamento"></app-pensamento>
     </div>
   </div>
 </section>
