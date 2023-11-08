@@ -15,6 +15,7 @@
       <img
         src="/assets/imagens/icone-favorito-{{ mudarIconeFavorito() }}.png"
         alt="Ícone de favorito {{ mudarIconeFavorito() }}"
+        (click)="atualizarFavoritos()"
       />
     </div>
     <button class="botao-editar">
