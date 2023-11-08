@@ -25,7 +25,7 @@
       "conteudo": "Novo pensamento de teste",
       "autoria": "Igor",
       "modelo": "modelo1",
-      "favorito": true,
+      "favorito": false,
       "id": 4
     },
     {
@@ -39,7 +39,7 @@
       "conteudo": "Que a força esteja com você",
       "autoria": "Yoda",
       "modelo": "modelo1",
-      "favorito": true,
+      "favorito": false,
       "id": 6
     }
   ]
