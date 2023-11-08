@@ -4,36 +4,42 @@
       "id": 1,
       "conteudo": "Que bom que você veio",
       "autoria": "Igor",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": true
     },
     {
       "id": 2,
       "conteudo": "Estudando Angular 123",
       "autoria": "Igor",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": 3,
       "conteudo": "Angular é o melhor",
       "autoria": "Igor",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "conteudo": "Novo pensamento de teste",
       "autoria": "Igor",
       "modelo": "modelo1",
+      "favorito": true,
       "id": 4
     },
     {
       "conteudo": "Testando CRUD",
       "autoria": "Igor",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 5
     },
     {
       "conteudo": "Que a força esteja com você",
       "autoria": "Yoda",
       "modelo": "modelo1",
+      "favorito": true,
       "id": 6
     }
   ]

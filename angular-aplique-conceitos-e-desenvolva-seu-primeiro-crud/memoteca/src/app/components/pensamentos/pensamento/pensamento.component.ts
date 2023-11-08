@@ -12,10 +12,16 @@ export class PensamentoComponent {
     conteudo: 'I love Angular',
     autoria: 'Igor',
     modelo: 'modelo3',
+    favorito: false,
   };
 
   larguraPensamento(): string {
     if (this.pensamento.conteudo.length >= 256) return 'pensamento-g';
     return 'pensamento-p';
+  }
+
+  mudarIconeFavorito(): string {
+    if (this.pensamento.favorito === false) return 'inativo';
+    return 'ativo';
   }
 }
