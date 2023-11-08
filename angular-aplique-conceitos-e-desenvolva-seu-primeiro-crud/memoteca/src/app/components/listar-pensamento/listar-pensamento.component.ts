@@ -10,12 +10,12 @@ export class ListarPensamentoComponent {
     {
       conteudo: 'Comunicação entre componentes',
       autoria: 'Angular',
-      modelo: 'modelo3',
+      modelo: 'modelo1',
     },
     {
       conteudo: 'Passo informações para o componente filho',
       autoria: 'Componente pai',
-      modelo: 'modelo3',
+      modelo: 'modelo2',
     },
     {
       conteudo: 'Minha propriedade é decorada com @Input',
