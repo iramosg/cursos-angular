@@ -14,7 +14,7 @@ export class PensamentoService {
   listar(pagina: number): Observable<Pensamento[]> {
     const itensPorPagina = 2;
     let params = new HttpParams()
-      .set('page', pagina)
+      .set('_page', pagina)
       .set('_limit', itensPorPagina);
 
     return this.http.get<Pensamento[]>(this.api, { params });
