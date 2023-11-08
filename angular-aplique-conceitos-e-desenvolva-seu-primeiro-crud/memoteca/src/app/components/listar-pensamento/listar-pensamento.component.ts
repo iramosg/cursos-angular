@@ -31,4 +31,14 @@ export class ListarPensamentoComponent implements OnInit {
         if (!listaPensamentos.length) this.haMaisPensamentos = false;
       });
   }
+
+  pesquisarPensamentos() {
+    this.haMaisPensamentos = true;
+    this.paginaAtual = 1;
+    this.service
+      .listar(this.paginaAtual, this.filtro)
+      .subscribe((listaPensamentos) => {
+        this.listaPensamentos = listaPensamentos;
+      });
+  }
 }

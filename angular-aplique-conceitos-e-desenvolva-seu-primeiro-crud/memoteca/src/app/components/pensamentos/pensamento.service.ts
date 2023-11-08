@@ -18,7 +18,7 @@ export class PensamentoService {
       .set('_limit', itensPorPagina);
 
     if (filtro.trim().length > 2) {
-      params.set('q', filtro);
+      params = params.set('q', filtro);
     }
 
     return this.http.get<Pensamento[]>(this.api, { params });
