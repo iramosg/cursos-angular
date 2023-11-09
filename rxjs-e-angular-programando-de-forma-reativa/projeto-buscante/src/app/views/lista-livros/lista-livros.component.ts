@@ -13,13 +13,10 @@ export class ListaLivrosComponent {
   constructor(private service: LivroService) {}
 
   buscarLivros() {
-    this.service.buscar(this.campoBusca).subscribe(
-      (result) => {
-        console.log(result);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    this.service.buscar(this.campoBusca).subscribe({
+      next: (result) => console.log(result),
+      error: (error) => console.log(error), // Se parar aqui, não executa o complete
+      complete: () => console.log('Observable completado.'),
+    });
   }
 }
