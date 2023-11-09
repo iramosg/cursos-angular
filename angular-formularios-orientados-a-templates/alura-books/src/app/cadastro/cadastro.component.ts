@@ -23,9 +23,22 @@ export class CadastroComponent implements OnInit {
     console.log(form.controls);
   }
 
-  consultaCep(event: any) {
-    this.service.getConsultaCep(event.target.value).subscribe((result) => {
-      console.log(result);
+  consultaCep(event: any, f: NgForm) {
+    const cep = event.target.value;
+    if (cep !== "")
+      this.service.getConsultaCep(cep).subscribe((result) => {
+        console.log(result);
+        this.popularEndereco(result, f);
+      });
+  }
+
+  popularEndereco(dados: any, f: NgForm) {
+    f.form.patchValue({
+      endereco: dados.logradouro,
+      complemento: dados.complemento,
+      bairro: dados.bairro,
+      cidade: dados.localidade,
+      estado: dados.uf,
     });
   }
 }
