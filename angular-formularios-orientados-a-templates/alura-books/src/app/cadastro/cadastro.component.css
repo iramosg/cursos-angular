@@ -68,12 +68,6 @@
   background-size: contain;
 }
 
-.erro__texto {
-  font-size: 12px;
-  line-height: 18px;
-  color: var(--vermelho);
-}
-
 .ng-touched.ng-invalid:not(form) {
   border-color: red;
   color: red;
