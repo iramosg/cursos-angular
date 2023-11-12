@@ -7,16 +7,17 @@ import { Item, LivrosResultado } from '../models/interfaces';
   providedIn: 'root',
 })
 export class LivroService {
-  private readonly api = 'https://www.googleapis.com/books/v1/volume';
+  private readonly api = 'https://www.googleapis.com/books/v1/volumes';
 
   constructor(private http: HttpClient) {}
 
-  buscar(valorDigitado: string): Observable<Item[]> {
+  buscar(valorDigitado: string): Observable<LivrosResultado> {
     const params = new HttpParams().append('q', valorDigitado);
-    return this.http.get<LivrosResultado>(this.api, { params }).pipe(
-      // tap((result) => console.log(result)),
-      map((result) => result.items)
-      // tap((result) => console.log('Fluxo após o map', result))
-    );
+    return this.http.get<LivrosResultado>(this.api, { params });
+    // .pipe(
+    //   tap((result) => console.log(result)),
+    //   // map((result) => result.items ?? [])
+    //   // tap((result) => console.log('Fluxo após o map', result))
+    // );
   }
 }
