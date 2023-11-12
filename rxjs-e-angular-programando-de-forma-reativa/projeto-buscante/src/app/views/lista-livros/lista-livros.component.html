@@ -1,8 +1,8 @@
 <section class="container">
   <header>Que livro você procura?</header>
   <div class="busca">
-    <input type="search" [(ngModel)]="campoBusca" />
-    <button (click)="buscarLivros()">
+    <input type="search" [(ngModel)]="campoBusca" (keyup)="buscarLivros()" />
+    <button>
       <img src="assets/imagens/icone-busca.png" alt="Lupa de cor roxa" />
     </button>
   </div>

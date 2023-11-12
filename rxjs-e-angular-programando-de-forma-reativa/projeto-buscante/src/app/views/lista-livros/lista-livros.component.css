@@ -7,7 +7,7 @@ section {
 }
 
 header {
-  color: #6C63FF;
+  color: #6c63ff;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -15,13 +15,13 @@ header {
   margin-top: 76px;
   margin-bottom: 5px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 section input {
   width: 588px;
   height: 56px;
-  border: 2px solid #6C63FF;
+  border: 2px solid #6c63ff;
   border-radius: 10px;
   outline: 0;
   box-sizing: border-box;
@@ -30,7 +30,7 @@ section input {
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 4.08%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -39,31 +39,31 @@ section input {
 }
 
 section p {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #8B8B8B;
+  color: #8b8b8b;
 }
 
 .resultados {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #8B8B8B;
+  color: #8b8b8b;
 }
 
 .mensagem-erro {
-  color: #6C63FF;
+  color: #6c63ff;
 }
 
-input[type='search']:focus {
+input[type="search"]:focus {
   background-image: none;
   outline: none;
   text-decoration: none;
@@ -73,7 +73,9 @@ input[type='search']:focus {
 input[type="search"]::-webkit-search-decoration,
 ::-webkit-search-cancel-button,
 ::-webkit-search-results-button,
-::-webkit-search-results-decoration { display: none; }
+::-webkit-search-results-decoration {
+  display: none;
+}
 
 section button {
   border: none;
@@ -82,7 +84,7 @@ section button {
   position: relative;
   top: 0.3rem;
   right: 50px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .busca {
@@ -90,7 +92,7 @@ section button {
 }
 
 .teste {
-  cursor:auto;
+  cursor: auto;
   background-color: orange;
   font-family: "Poppins";
   font-size: 20px;
@@ -120,13 +122,3 @@ section button {
   margin-top: 72px;
   margin-left: 64px;
 }
-
-
-
-
-
-
-
-
-
-
