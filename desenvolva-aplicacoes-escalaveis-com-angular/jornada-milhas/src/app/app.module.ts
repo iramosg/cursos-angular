@@ -33,6 +33,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
 import { DepoimentosComponent } from './pages/home/depoimentos/depoimentos.component';
 import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-passageiro.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-
     DropdownUfComponent,
     DepoimentosComponent,
     SeletorPassageiroComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
