@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import {
+  EMPTY,
   catchError,
   debounceTime,
   distinctUntilChanged,
@@ -23,6 +24,7 @@ const PAUSA = 300;
 })
 export class ListaLivrosComponent {
   campoBusca = new FormControl();
+  mensagemErro = '';
   constructor(private service: LivroService) {}
 
   livrosEncontrados$ = this.campoBusca.valueChanges.pipe(
@@ -35,7 +37,14 @@ export class ListaLivrosComponent {
     map((result) => this.livrosResultadoParaLivros(result)),
     catchError((erro) => {
       console.log(erro);
-      return throwError(() => new Error('Ops, ocorreu um erro.'));
+      this.mensagemErro = 'Ops, ocorreu um erro. Recaregue a aplicação.';
+      return EMPTY;
+      // return throwError(
+      //   () =>
+      //     new Error(
+      //       (this.mensagemErro = 'Ops, ocorreu um erro. Recaregue a aplicação.')
+      //     )
+      // );
     })
   );
 
