@@ -26,6 +26,12 @@
               placeholder="Digite seu e-mail"
               formControlName="email"
             />
+            <mat-error *ngIf="loginForm.get('email')?.errors?.['required']"
+              >E-mail obrigatório</mat-error
+            >
+            <mat-error *ngIf="loginForm.get('email')?.errors?.['email']"
+              >E-mail inválido</mat-error
+            >
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
@@ -35,10 +41,18 @@
               placeholder="Digite sua senha"
               formControlName="senha"
             />
+            <mat-error *ngIf="loginForm.get('senha')?.errors?.['required']"
+              >Senha obrigatória</mat-error
+            >
           </mat-form-field>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-flat-button color="primary" (click)="login()">
+          <button
+            [disabled]="loginForm.invalid"
+            mat-flat-button
+            color="primary"
+            (click)="login()"
+          >
             ACESSAR MINHA CONTA
           </button>
         </mat-card-actions>

@@ -1,12 +1,16 @@
 <header class="app-header">
   <app-container>
     <mat-toolbar>
-      <img src="/assets/imagens/logo.png" alt="Logo da aplicação Jornada" />
+      <img
+        src="/assets/imagens/logo.png"
+        alt="Logo da aplicação Jornada"
+        routerLink="/"
+      />
       <span class="spacer"></span>
       <button mat-button>Vender milhas</button>
       <button mat-button>Sobre</button>
       <button mat-raised-button color="primary">CADASTRE-SE</button>
-      <button mat-stroked-button>LOGIN</button>
+      <button mat-stroked-button routerLink="/login">LOGIN</button>
     </mat-toolbar>
   </app-container>
 </header>
