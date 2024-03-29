@@ -1,7 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Donut } from '../../models/donut.model';
+import { NgClass, NgSwitch, NgSwitchCase, CurrencyPipe } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
+  standalone: true,
+  imports: [RouterModule, NgClass, NgSwitch, NgSwitchCase, CurrencyPipe],
   selector: 'donut-card',
   template: `
     <a

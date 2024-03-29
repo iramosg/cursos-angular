@@ -1,8 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { Donut } from '../../models/donut.model';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
+  standalone: true,
+  imports: [FormsModule, NgIf, NgForOf],
   selector: 'donut-form',
   template: `
     <form class="donut-form" #form="ngForm" *ngIf="donut; else loading">

@@ -1,8 +1,13 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Donut } from '../../models/donut.model';
 import { DonutService } from '../../services/donut.service';
+import { RouterModule } from '@angular/router';
+import { DonutCardComponent } from '../../components/donut-card/donut-card.component';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
+  standalone: true,
+  imports: [RouterModule, NgIf, NgForOf, DonutCardComponent],
   selector: 'donut-list',
   encapsulation: ViewEncapsulation.Emulated,
   template: `
